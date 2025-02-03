@@ -1,0 +1,68 @@
+.InputContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 8px;
+
+
+  .G-input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    outline: none;
+    background-color: white;
+    font-size: 14px;
+    font-family: 'CeraPro-Regular', sans-serif;
+    line-height: 16px;
+    position: relative;
+    z-index: 2;
+
+    &::placeholder {
+      letter-spacing: 0 !important;
+    }
+
+    &:focus-visible {
+      border-color: #46A358;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .redInput {
+    border: 1px solid #ff3535 !important;
+  }
+
+
+  .showBtn {
+    top: 9px;
+    position: absolute;
+    right: 10px;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
+
+
+  .messageBlock {
+    min-height: 10px;
+    position: relative;
+    .errorMessage {
+      font-size: 12px;
+      font-family: 'CeraPro-Light', sans-serif;
+      color: #ff3535;
+    }
+  }
+
+
+}

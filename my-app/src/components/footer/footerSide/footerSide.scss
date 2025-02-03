@@ -1,0 +1,72 @@
+.footerSide {
+    width: 100%;
+    background: #FBFBFB;
+    border-bottom: 1px solid rgba(70, 163, 88, 0.20);
+    padding: 35px 24px;
+    display: flex;
+    gap: 130px;
+
+
+    .linksLine {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+
+        .linkHeader {
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-family: 'CeraPro-Bold', sans-serif;
+            color: #3d3d3d;
+            line-height: 16px;
+        }
+
+        .link {
+            text-decoration: none;
+            cursor: pointer;
+            line-height: 30px;
+            font-size: 14px;
+            font-family: 'CeraPro-Regular', sans-serif;
+            color: #3d3d3d;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                color: #46A358;
+            }
+        }
+
+    }
+
+
+    .webSites {
+        margin: 12px 0 34px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .link {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: 0.2s ease-in-out;
+            border: 1px solid rgba(70, 163, 88, 0.20);
+
+            &:hover{
+                filter: brightness(1.2);
+            }
+        }
+
+    }
+
+    .cardImg{
+        margin-top: 8px;
+        mix-blend-mode: multiply;
+    }
+
+
+}

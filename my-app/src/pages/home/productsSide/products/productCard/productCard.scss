@@ -1,0 +1,194 @@
+@import "../../../../../source/mixin.scss";
+.ProductCart {
+    width: 260px;
+    cursor: pointer;
+    @include screen($wide-s){
+        width: 200px;
+    }
+    @include screen($tablet){
+        width: 48%;
+    }
+    @include screen($mobile-l){
+        width: 49%;
+    }
+
+    .imgBlock {
+        width: 100%;
+        background-color: white;
+        height: 300px;
+        padding: 0 0 30px;
+        display: flex;
+        position: relative;
+        align-items: start;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: 12px;
+        border-top: 1px solid white;
+        transition: 0.2s ease-in-out;
+        border-radius: 16px;
+        @include screen($wide-s){
+            height: 250px;
+        }
+        @include screen($tablet-l){
+            padding: 0 0 10px;
+        }
+        @include screen($tablet){
+            height: 300px;
+        }
+        @include screen($mobile-l){
+            height: 220px;
+        }
+        @include screen($mobile-m){
+            height: 180px;
+            border-radius: 12px;
+        }
+
+        .prdImg {
+            width: 100%;
+            mix-blend-mode: multiply;
+            border-radius: 16px;
+            height: 300px;
+            object-fit: cover;
+            @include screen($wide-s){
+                height: 250px;
+            }
+            @include screen($tablet){
+                height: 300px;
+            }
+            @include screen($mobile-l){
+                height: 220px;
+            }
+            @include screen($mobile-m){
+                height: 180px;
+                border-radius: 12px;
+            }
+        }
+
+
+        &:hover {
+            border-top: 1px solid #46a358;
+            .btn{
+                transform: translateY(0) !important;
+            }
+        }
+
+        .buttonsBlock {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            bottom: 8px;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .btn {
+                width: 35px;
+                height: 35px;
+                border-radius: 4px;
+                background-color: white;
+                border: none;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transform: translateY(100px);
+
+                &:hover {
+                    
+
+                    path {
+                        fill: #46a358 !important;
+                    }
+                }
+
+                &:disabled{
+                    cursor: auto !important;
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+
+                    path {
+                        transition: 0.2s ease-in-out;
+                    }
+                }
+            }
+
+            .activeBtn{
+                background-color: #46A358 !important;
+                path{
+                    fill: white !important;
+                }
+                &:hover{
+                    background-color: #ff3535 !important;
+                    path{
+                        fill: white !important;
+                    }
+                }
+            }
+
+            .btn1{
+                transition: 0.3s ease-in-out;
+            }
+            .btn2{
+                transition: 0.4s ease-in-out;
+            }
+            .btn3{
+                transition: 0.5s ease-in-out;
+            }
+
+        }
+
+
+    }
+
+    .textInfo {
+
+        .name {
+            font-size: 16px;
+            font-family: 'CeraPro-Regular', sans-serif;
+            color: #3d3d3d;
+            line-height: 16px;
+            transition: 0.2s ease-in-out;
+            text-decoration: none;
+            cursor: pointer;
+            margin-bottom: 6px;
+            display: block;
+            @include screen($tablet-l){
+                font-size: 15px;
+                margin-bottom: 4px;
+            }
+        }
+
+        .priceBlock {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .price {
+                font-size: 18px;
+                color: #46a358;
+                font-family: 'CeraPro-Bold', sans-serif;
+                line-height: 16px;
+                @include screen($tablet-l){
+                    font-size: 16px;
+                }
+            }
+
+            .oldPrice {
+                font-size: 18px;
+                color: #A5A5A5;
+                font-family: 'CeraPro-Regular', sans-serif;
+                line-height: 16px;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+
+
+}

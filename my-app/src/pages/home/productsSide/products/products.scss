@@ -1,0 +1,254 @@
+@import "../../../../source/mixin.scss";
+.products {
+    flex-grow: 1;
+    @include screen($tablet-w){
+        width: 100%;
+    }
+
+    .sortBlock {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+
+
+        .sorts {
+            align-items: center;
+            gap: 40px;
+            @include screen($tablet){
+                gap: 20px;
+            }
+
+            .sortMenuBtn{
+                background-color: transparent;
+                border: none;
+                padding: 4px;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                &:hover{
+                    filter: brightness(1.1);
+                }
+                .menuIcon{
+                    font-size: 24px;
+                    margin-top: 5px;
+                }
+            }
+
+            .sortItem {
+                cursor: pointer;
+                font-size: 15px;
+                font-family: 'CeraPro-Regular', sans-serif;
+                line-height: 32px;
+                color: #3d3d3d;
+                overflow: hidden;
+                position: relative;
+                transition: 0.2s ease-in-out;
+                @include screen($tablet){
+                    font-size: 14px;
+                    line-height: 26px;
+                }
+
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #46A358;
+                    left: 0;
+                    bottom: -5px;
+                    transition: 0.2s ease-in-out;
+                    @include screen($tablet){
+                        height: 2px;
+                    }
+                }
+
+                &:hover {
+                    color: #46A358;
+                }
+
+            }
+
+            .activeSortItem {
+                transition: 0.2s ease-in-out;
+                font-family: 'CeraPro-Bold', sans-serif;
+                color: #46A358 !important;
+
+                &::after {
+                    bottom: 0;
+                }
+            }
+        }
+
+        .shorts {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-family: 'CeraPro-Regular', sans-serif;
+            color: #3d3d3d;
+            line-height: 16px;
+            @include screen($tablet){
+                font-size: 14px;
+            }
+            @include screen($mobile-l){
+                display: none;
+            }
+
+
+            .menuBtn {
+                margin-left: 8px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-size: 15px;
+                font-family: 'CeraPro-Regular', sans-serif;
+                color: #3d3d3d;
+                line-height: 16px;
+                border: none;
+                background-color: transparent;
+                position: relative;
+                transition: 0.2s ease-in-out;
+                @include screen($tablet){
+                    font-size: 14px;
+                }
+
+                .arrowImg {
+                    margin-left: 8px;
+                    transition: 0.2s ease-in-out;
+                }
+
+                .activeArrow {
+                    transform: rotateX(180deg);
+                }
+
+                .sortMenuBlock {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    top: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    background: #FBFBFB;
+                    transition: 0.2s ease-in-out;
+
+                    .menuSortItem {
+                        border: none;
+                        background-color: #FBFBFB;
+                        font-size: 15px;
+                        font-family: 'CeraPro-Regular', sans-serif;
+                        color: #3d3d3d;
+                        line-height: 14px;
+                        border: none;
+                        cursor: pointer;
+                        padding: 4px 8px;
+                        transition: 0.2s ease-in-out;
+                        @include screen($tablet){
+                            font-size: 14px;
+                        }
+                        &:hover {
+                            background-color: hsl(0, 0%, 82%);
+                        }
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+    .productList {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 70px;
+        @include screen($tablet-l){
+            row-gap: 40px;
+        }
+    }
+
+    .loadBtn{
+        width: 100%;
+        margin: 50px 0 50px;
+        text-align: center;
+        padding: 16px;
+        border: 2px solid #46A358;
+
+        background-color: white;
+        border-radius: 32px;
+        font-size: 16px;
+        font-family: 'CeraPro-Medium', sans-serif;
+        color: #46A358;
+        cursor: pointer;
+        transition: 0.2s ease-in-out all;
+        &:hover{
+            background-color: #46A358;
+            color: white;
+        }
+    }
+
+    .loadingBtnCont{
+        width: 100%;
+        margin: 50px 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 50px;
+            height: 50px;
+            animation: rotation 2s infinite linear;
+        }
+    }
+
+    .pagesBlock{
+        margin-top: 100px;
+        display: flex;
+        justify-content: end;
+
+        .buttonsBlock{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .btn{
+                width: 35px;
+                height: 35px;
+                border: 1px solid #E5E5E5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                background-color: white;
+                font-size: 18px;
+                font-family: 'CeraPro-Light', sans-serif;
+                line-height: 16px;
+                color: #3d3d3d;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                &:hover{
+                    background-color: #46a35940;
+                }
+            }
+
+            .activeBtn{
+                background-color: #46A358 !important;
+                border-color: #46A358 !important;
+                color: white;
+                font-family: 'CeraPro-Bold', sans-serif;
+            }
+        }
+    }
+
+}
+
+
+@keyframes rotation {
+    0%{
+       transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

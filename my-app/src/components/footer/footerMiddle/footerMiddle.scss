@@ -1,0 +1,26 @@
+.FooterMiddle{
+    width: 100%;
+    padding: 25px;
+    border-top: 1px solid rgba(70, 163, 88, 0.20);
+    border-bottom: 1px solid rgba(70, 163, 88, 0.20);
+    background: rgba(70, 163, 88, 0.10);
+    display: flex;
+    align-items: center;
+    gap: 75px;
+
+    .addressLink{
+        display: flex;
+        align-items: center;
+        font-family: 'CeraPro-Regular', sans-serif;
+        color: #3d3d3d;
+        font-size: 14px;
+        line-height: 22px;
+        gap: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        span{
+            max-width: 170px;
+        }
+    }
+
+}

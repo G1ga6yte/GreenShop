@@ -1,0 +1,22 @@
+@import "../../../source/mixin.scss";
+.productsCont{
+    width: 100%;
+    padding-top: 50px;
+    @include screen($tablet-w){
+        padding-top: 30px;
+    }
+    @include screen($tablet){
+        padding-top: 20px;
+    }
+
+    .backgroundBlock{
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 6;
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+    }
+
+}

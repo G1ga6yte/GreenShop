@@ -1,0 +1,224 @@
+@import "../../../source/mixin.scss";
+.headBanner {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .MainBlock{
+        width: 100% !important;
+        position: relative !important;
+        height: 450px;
+        @include screen($wide){
+            height: 400px;
+        }
+        @include screen($tablet-w){
+            height: 300px;
+        }
+        @include screen($tablet){
+            height: 250px;
+        }
+        @include screen($tablet-m){
+            height: 450px;
+        }
+        @include screen($mobile-m){
+            height: 400px;
+        }
+
+        .react-slideshow-fadezoom-images-wrap{
+            width: 100% !important;
+            position: relative !important;
+        }
+
+        .pageContainer{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            background: linear-gradient(98deg, rgba(245, 245, 245, 0.50) -23.46%, rgba(245, 245, 245, 0.50) 107.51%);
+
+            @include screen($tablet-m){
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .textBlock{
+                flex-grow: 1;
+                margin-right: 100px;
+                padding: 70px 0 0 40px;
+                @include screen($wide){
+                    padding: 40px 0 0 30px;
+                }
+                @include screen($tablet-w){
+                    margin-right: 50px;
+                }
+                @include screen($tablet){
+                    padding: 25px 0 0 20px;
+                    margin-right: 30px;
+                }
+                @include screen($tablet-m){
+                    padding: 20px 10px;
+                    height: 150px;
+                }
+                @include screen($mobile-m){
+                    height: 200px;
+                }
+
+                .overHeader{
+                   font-size: 14px;
+                   font-family: 'CeraPro-Medium', sans-serif;
+                   letter-spacing: 1.4px;
+                   text-transform: uppercase;
+                   color: #3d3d3d;
+                   line-height: 16px;
+                    @include screen($tablet-w){
+                        font-size: 12px;
+                    }
+                }
+                .header{
+                    font-size: 70px;
+                    font-family: 'CeraPro-Black', sans-serif;
+                    line-height: 70px;
+                    text-transform: uppercase;
+                    color: #3d3d3d;
+                    margin-bottom: 5px;
+                    @include screen($wide){
+                        font-size: 50px;
+                        line-height: 50px;
+                    }
+                    @include screen($tablet-w){
+                        font-size: 32px;
+                        line-height: 32px;
+                    }
+                    @include screen($tablet){
+                        font-size: 26px;
+                        line-height: 26px;
+                    }
+
+                    span{
+                        color: #46A358 !important;
+                        white-space: nowrap;
+                    }
+                }
+                .prg{
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #727272;
+                    font-family: 'CeraPro-Regular', sans-serif;
+                    margin-bottom: 45px;
+                    @include screen($wide){
+                        margin-bottom: 20px;
+                    }
+                    @include screen($tablet-w){
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                    @include screen($tablet){
+                        line-height: 16px;
+                    }
+                }
+                
+
+
+            }
+
+            .imgBlock{
+                position: relative;
+                .img1{
+                    height: 450px;
+                    @include screen($wide){
+                        height: 400px;
+                    }
+                    @include screen($tablet-w){
+                        height: 300px;
+                    }
+                    @include screen($tablet){
+                        height: 250px;
+                    }
+                    @include screen($tablet-m){
+                        height: 300px;
+                    }
+                    @include screen($mobile-m){
+                        height: 200px;
+                    }
+                }
+                .img2{
+                    position: absolute;
+                    z-index: 2;
+                    left: 12%;
+                    bottom: 9%;
+                    width: 100px;
+                    @include screen($wide){
+                        bottom: 8%;
+                    }
+                    @include screen($tablet-w){
+                        left: 5%;
+                        bottom: 7%;
+                    }
+                    @include screen($mobile-m){
+                        width: 60px;
+                        bottom: 9%;
+                        left: 8%;
+                    }
+                }
+            }
+
+
+        }
+
+       
+    }
+
+    .btn1{
+        color: white;
+        background-color: #46A358;
+        border: none;
+        transition: 0.2s ease-in-out;
+        border-radius: 6px;
+        padding: 10px 28px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'CeraPro-Bold', sans-serif;
+
+        @include screen($tablet-w){
+            font-size: 14px;
+            padding: 8px 20px;
+        }
+        @include screen($tablet){
+            font-size: 12px;
+            padding: 6px 16px;
+        }
+
+        &:hover{
+            filter: brightness(1.1) !important;
+        }
+    }
+
+    .indicators{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        gap: 8px;
+
+        .indicator{
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: #46a3594e;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            &:hover{
+            background-color: #46a3596e;
+            }
+        }
+        .active{
+            background-color: #46A358 !important;
+        }
+    }
+    
+    
+}

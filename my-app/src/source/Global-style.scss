@@ -1,0 +1,62 @@
+.G-container{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px 0;
+    
+}
+
+.G-flex{
+    display: flex;
+}
+
+.message {
+    min-height: 15px;
+    height: max-content;
+    position: relative;
+    .errorMessage {
+        position: absolute;
+        top: -15px;
+        font-size: 12px;
+        font-family: 'CeraPro-Light', sans-serif;
+        color: #ff3535;
+    }
+}
+
+.box-shadow{
+    box-shadow: rgba(119, 152, 124, 0.2) 0 2px 12px;
+}
+
+.G-button-save {
+    width: 100%;
+    background-color: #46A358;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid #46A358;
+    outline: none;
+    cursor: pointer;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'CeraPro-Bold', sans-serif;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+
+    &:disabled{
+        background-color: #9ded99;
+        border-color: #9ded99;
+        filter: brightness(1) !important;
+        cursor: auto !important;
+    }
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+
+    &:focus-visible {
+        filter: brightness(1.1);
+    }
+}
+

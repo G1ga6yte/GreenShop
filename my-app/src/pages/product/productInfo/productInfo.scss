@@ -1,0 +1,484 @@
+.productInfo{
+
+  .routePrg{
+    width: 100%;
+    font-family: 'CeraPro-Regular', sans-serif;
+    font-size: 15px;
+    color: #3D3D3D;
+    line-height: 16px;
+    margin-bottom: 40px;
+
+    .boldText{
+      cursor: pointer;
+      font-family: 'CeraPro-Bold', sans-serif;
+      transition: 0.2s ease-in-out all;
+      color: #3D3D3D;
+      text-decoration: none;
+      &:hover{
+        filter: brightness(1.1);
+      }
+    }
+  }
+
+  .itemMainCont{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .imagesContainer{
+      width: 49%;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+
+      .images{
+        width: fit-content;
+        min-width: 100px;
+        margin-right: 30px;
+        .smallImg{
+          width: 100px;
+          height: 100px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          transition: 0.2s ease-in-out all;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          object-fit: cover;
+          &:hover{
+            border-color: #46A358;
+          }
+        }
+        .activeSmallImg{
+          border-color: #46A358 !important;
+        }
+
+
+      }
+      .mainImg{
+        flex-grow: 1;
+        height: 440px;
+        border-radius: 16px;
+        transition: 0.2s ease-in-out all;
+        object-fit: cover;
+      }
+      .imgLoading{
+        filter: blur(5px);
+      }
+
+    }
+
+    .itemInfoContainer{
+      width: 49%;
+
+      .name{
+        font-size: 28px;
+        color: #3D3D3D;
+        line-height: 16px;
+        font-family: 'CeraPro-Bold', sans-serif;
+        margin-bottom: 20px;
+      }
+
+      .priceBlock{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(70, 163, 88, 0.30);
+        margin-bottom: 15px;
+
+        .price{
+          font-size: 22px;
+          line-height: 16px;
+          font-family: 'CeraPro-Bold', sans-serif;
+          color: #46A358;
+        }
+
+        .starsLine{
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          span{
+            margin-left: 12px;
+            font-size: 15px;
+            font-family: 'CeraPro-Regular', sans-serif;
+            line-height: 16px;
+            color: #3D3D3D;
+          }
+        }
+
+      }
+
+      .sizesCont{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+        margin-bottom: 24px;
+
+        .size{
+          width: 28px;
+          height: 28px;
+          border-radius: 28px;
+          border: 1px solid #EAEAEA;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: 0.2s ease-in-out all;
+
+          &:hover{
+            border-color: #46A358;
+          }
+          span{
+            color: #727272;
+            font-family: 'CeraPro-Medium', sans-serif;
+            line-height: 16px;
+            font-size: 14px;
+          }
+
+        }
+        .activeSize{
+          border-color: #46A358 !important;
+          span{
+            color: #46A358 !important;
+          }
+        }
+      }
+
+      .buttonsBlock{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 24px;
+
+        .countBlock{
+          display: flex;
+          align-items: center;
+          margin-right: 26px;
+          .countBtn{
+            width: 33px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #46A358;
+            border-radius: 29px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.2s ease-in-out all;
+            &:hover{
+              filter: brightness(1.1);
+            }
+          }
+          .countInput{
+            width: 50px;
+            border: none;
+            outline: none;
+            text-align: center;
+            font-family: 'CeraPro-Regular', sans-serif;
+            font-size: 18px;
+            line-height: 10px;
+            color: #3D3D3D;
+          }
+
+
+        }
+        .buyBtn{
+          width: 130px;
+          text-align: center;
+          padding: 10px;
+          border: 1px solid #46A358;
+          background-color: #46A358;
+          color: white;
+          font-family: 'CeraPro-Bold', sans-serif;
+          line-height: 20px;
+          border-radius: 6px;
+          font-size: 14px;
+          cursor: pointer;
+          outline: none;
+          transition: 0.2s ease-in-out;
+          &:hover{
+            filter: brightness(1.1);
+          }
+        }
+        .cartBtn{
+          border: 1px solid #46A358;
+          width: 130px;
+          padding: 10px;
+          border-radius: 6px;
+          color: #46A358;
+          background-color: white;
+          line-height: 20px;
+          font-size: 14px;
+          font-family: 'CeraPro-Bold', sans-serif;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          &:hover{
+            filter: brightness(1.1);
+          }
+        }
+        .saveBtn{
+          padding: 10px;
+          border-radius: 6px;
+          border: 1px solid #46A358;
+          background-color: white;
+          outline: none;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover{
+            filter: brightness(1.1);
+          }
+
+          .btnIcon{
+            font-size: 20px;
+          }
+        }
+      }
+
+      .infoLine{
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-family: 'CeraPro-Regular', sans-serif;
+        color: #A5A5A5;
+        line-height: 16px;
+        span{
+          color: #727272;
+        }
+      }
+
+      .endLine{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+
+        .miniHeader{
+          margin: 0;
+
+        }
+
+        .webIconBtn{
+          padding: 0 2px;
+          border: none;
+          background-color: transparent;
+          outline: none;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+          height: 12px;
+          &:hover{
+            filter: brightness(1.2);
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .itemDescCont{
+    margin-top: 100px;
+
+    .buttonsCont{
+      border-bottom: 1px solid rgba(70, 163, 88, 0.3);
+      width: 100%;
+      display: flex;
+      gap: 30px;
+      margin-bottom: 18px;
+
+
+      .descBtn{
+        padding-bottom: 10px;
+        border: none;
+        border-bottom: 3px solid white;
+        font-size: 17px;
+        font-family: 'CeraPro-Regular', sans-serif;
+        color: #3D3D3D;
+        line-height: 16px;
+        background-color: white;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover{
+          color: #46A358;
+        }
+      }
+      .activeBtn{
+        color: #46A358 !important;
+        border-bottom: 3px solid #46A358 !important;
+        font-family: 'CeraPro-Bold', sans-serif !important;
+      }
+    }
+
+    .reviewsCont{
+
+      .companyInfo{
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+
+        .companyLogo{
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 1px solid #46A358;
+        }
+        .textInfo{
+          margin-left: 16px;
+          .companyName{
+            font-size: 24px;
+            color: #3D3D3D;
+            line-height: 24px;
+            font-family: 'CeraPro-Medium', sans-serif;
+            margin-bottom: 4px;
+          }
+          .companyPrg{
+            font-size: 14px;
+            color: #A5A5A5;
+            line-height: 14px;
+            font-family: 'CeraPro-Regular', sans-serif;
+          }
+        }
+
+
+      }
+
+      .rateLine{
+        width: 100%;
+        display: flex;
+        align-items: end;
+        margin-bottom: 20px;
+        padding-left: 10px;
+
+        .rate{
+          font-size: 32px;
+          color: #727272;
+          font-family: 'CeraPro-Regular', sans-serif;
+          line-height: 32px;
+        }
+
+        .stars{
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          margin-left: 12px;
+
+          .starIcon{
+            font-size: 22px;
+          }
+        }
+
+      }
+
+      .userRateCont{
+        margin-bottom: 16px;
+        display: flex;
+        align-items: start;
+        margin-left: 30px;
+
+        .userLogo{
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #81d591;
+          color: white;
+          font-family: 'CeraPro-Medium', sans-serif;
+          font-size: 18px;
+          margin-right: 8px;
+        }
+
+        .reviewBlock{
+          .username{
+            font-size: 15px;
+            font-family: 'CeraPro-Bold', sans-serif;
+            color: #3D3D3D;
+          }
+          .userReviews{
+            font-size: 13px;
+            font-family: 'CeraPro-Regular', sans-serif;
+            color: #A5A5A5;
+            line-height: 14px;
+            margin-bottom: 8px;
+          }
+          .userRate{
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            .starIcon{
+              font-size: 14px;
+            }
+            span{
+              font-size: 12px;
+              font-family: 'CeraPro-Regular', sans-serif;
+              color: #A5A5A5;
+              line-height: 14px;
+              margin-left: 12px;
+            }
+          }
+          .message{
+            color: #3D3D3D;
+            font-family: 'CeraPro-Regular', sans-serif;
+            font-size: 14px;
+            line-height: 14px;
+            max-width: 600px;
+            margin-bottom: 8px;
+          }
+          .likeBtn{
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            font-family: 'CeraPro-Regular', sans-serif;
+            color: #727272;
+            gap: 6px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+            &:hover{
+              filter: brightness(1.2);
+            }
+            .icon{
+              font-size: 20px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+  }
+
+  .miniHeader{
+    font-size: 15px;
+    font-family: 'CeraPro-Medium', sans-serif;
+    line-height: 16px;
+    color: #3D3D3D;
+    margin: 24px 0 10px;
+  }
+  .descPrg{
+    font-size: 14px;
+    font-family: 'CeraPro-Regular', sans-serif;
+    line-height: 24px;
+    color: #727272;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .descHeader{
+    line-height: 24px;
+    font-size: 14px;
+    color: #3D3D3D;
+    font-family: 'CeraPro-Bold', sans-serif;
+  }
+
+}

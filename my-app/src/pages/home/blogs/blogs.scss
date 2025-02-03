@@ -1,0 +1,115 @@
+.blogs {
+    width: 100%;
+    margin-top: 150px;
+
+
+    .header {
+        font-family: 'CeraPro-Bold', sans-serif;
+        font-size: 30px;
+        color: #3d3d3d;
+        line-height: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .underHeader {
+        color: #727272;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        font-family: 'CeraPro-Regular', sans-serif;
+        margin-bottom: 35px;
+    }
+
+    .cardsCont {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .blogCard {
+            width: 23%;
+            background: #FBFBFB;
+            cursor: pointer;
+            overflow: hidden;
+
+            &:hover {
+                .img {
+                    scale: 1.05;
+                    transition: 0.5s ease-in-out !important;
+
+                }
+
+                .btn {
+                    color: #46A358 !important;
+
+                    svg {
+                        transform: translateX(5px) !important;
+
+                        path {
+                            fill: #46A358 !important;
+                        }
+                    }
+                }
+            }
+
+            .img {
+                width: 100%;
+                transition: 1.5s ease-in-out;
+            }
+
+            .textBlock {
+                padding: 13px;
+
+                .data {
+                    font-size: 14px;
+                    font-family: 'CeraPro-Medium', sans-serif;
+                    line-height: 16px;
+                    color: #46A358;
+                }
+
+                .name {
+                    font-size: 20px;
+                    line-height: 26px;
+                    font-family: 'CeraPro-Bold', sans-serif;
+                    color: #3d3d3d;
+                    margin: 4px 0;
+                }
+
+                .prg {
+                    font-size: 14px;
+                    font-family: 'CeraPro-Regular', sans-serif;
+                    line-height: 22px;
+                    color: #727272;
+                }
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-family: 'CeraPro-Medium', sans-serif;
+                    line-height: 16px;
+                    color: #3d3d3d;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+                    margin-top: 10px;
+
+                    svg {
+                        transition: 0.2s ease-in-out;
+                        margin-left: 3px;
+
+                        path {
+                            transition: 0.2s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+
+
+
+        }
+    }
+
+}

@@ -1,0 +1,239 @@
+@import "../../../../source/mixin.scss";
+.categories {
+    width: 300px;
+    margin-right: 50px;
+    @include screen($wide){
+        margin-right: 30px;
+    }
+    @include screen($tablet-l){
+        width: 220px;
+        margin-right: 20px;
+    }
+    @include screen($tablet-w){
+        position: fixed;
+        width: 300px;
+        left: 0;
+        top: 0;
+        background-color: white;
+        z-index: 7;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in-out;
+        max-height: 100vh;
+        overflow: auto;
+    }
+    @include screen($mobile-m){
+        width: 100%;
+    }
+
+    .closeBtn{
+        display: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+
+        .closeIcon{
+            font-size: 24px;
+        }
+
+        @include screen($tablet-w){
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .sortBlock {
+        padding: 15px 18px 20px;
+        background: #FBFBFB;
+        width: 100%;
+        @include screen($tablet-w){
+            padding: 20px 18px 20px;
+        }
+
+        .miniHeader {
+            font-size: 18px;
+            font-family: 'CeraPro-Bold', sans-serif;
+            line-height: 16px;
+            margin-bottom: 8px;
+            color: #3d3d3d;
+        }
+
+        .categoriesList {
+            margin-bottom: 35px;
+            padding-left: 12px;
+        }
+
+        .sizes {
+            padding-left: 12px;
+        }
+
+        .category {
+            font-size: 15px;
+            font-family: 'CeraPro-Regular', sans-serif;
+            line-height: 40px;
+            color: #3d3d3d;
+            transition: 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            &:hover {
+                color: #46A358;
+            }
+        }
+
+        .activeCategory {
+            color: #46A358 !important;
+            box-shadow: none !important;
+            font-family: 'CeraPro-Bold', sans-serif;
+
+        }
+
+        .rangeBlock {
+            width: 210px;
+            padding-left: 20px;
+            @include screen($tablet-l){
+                width: 180px;
+            }
+            @include screen($tablet-w){
+                width: 210px;
+            }
+
+            .MuiSlider-root {
+                color: #46A358;
+                height: 4px;
+
+                .MuiSlider-rail {
+                    height: 4px;
+                }
+
+                .MuiSlider-track {
+                    height: 4px;
+                }
+
+                .MuiSlider-thumb {
+                    box-shadow: none !important;
+                    background-color: #46A358;
+                    outline: 2px solid white;
+                    width: 15px;
+                    height: 15px;
+                    margin-top: -5px;
+                    top: 20px;
+
+                    .MuiSlider-valueLabel {
+                        display: none !important;
+                    }
+                }
+            }
+
+            .pricePrg {
+                font-size: 15px;
+                font-family: 'CeraPro-Regular', sans-serif;
+                color: #3d3d3d;
+                line-height: 16px;
+                margin-left: -8px;
+                margin-bottom: 16px;
+
+                span {
+                    color: #46A358;
+                    font-family: 'CeraPro-Bold', sans-serif;
+
+                }
+            }
+
+            .filterBtn {
+                padding: 8px 26px;
+                background-color: #46A358;
+                border-radius: 6px;
+                font-size: 16px;
+                font-family: 'CeraPro-Bold', sans-serif;
+                color: white;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                margin-bottom: 45px;
+                margin-left: -8px;
+                border: none;
+
+                &:hover {
+                    filter: brightness(1.1);
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+    }
+
+    .bannerBlock {
+        width: 100%;
+        padding: 15px 0 10px;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(180deg, rgba(70, 163, 88, 0.10) 0%, rgba(70, 163, 88, 0.03) 100%);
+
+        .header{
+            font-size: 65px;
+            color: #46A358;
+            line-height: 65px;
+            font-family: 'Hanged-Letters', sans-serif;
+            text-align: center;
+            
+        }
+        .underHeader{
+            text-align: center;
+            font-size: 22px;
+            font-family: 'CeraPro-Bold', sans-serif;
+            line-height: 26px;
+            color: #3d3d3d;
+            margin-top: 5px;
+        }
+
+        img{
+            mix-blend-mode: multiply;
+            width: 100%;
+            scale: 1.1;
+        }
+
+        .circle1{
+            width: 45px;
+            height: 45px;
+            border-radius: 32px;
+            background: linear-gradient(145deg, rgba(70, 163, 88, 0.30) -46.09%, rgba(70, 163, 88, 0.00) 103.28%);
+            position: absolute;
+            right: 5%;
+            bottom: 15%;
+        }
+        .circle2{
+            width: 22px;
+            height: 22px;
+            border-radius: 7px;
+            border: 2px solid #46A358;
+            opacity: 0.1;
+            position: absolute;
+            left: 5%;
+            bottom: 35%;
+        }
+        .circle3{
+            width: 15px;
+            height: 15px;
+            border-radius: 32px;
+            background: linear-gradient(145deg, rgba(70, 163, 88, 0.30) -46.09%, rgba(70, 163, 88, 0.00) 103.28%);
+            position: absolute;
+            top: 25%;
+            left: 10%;
+        }
+    }
+}
+
+.activeMenu{
+    transform: translateX(0);
+}

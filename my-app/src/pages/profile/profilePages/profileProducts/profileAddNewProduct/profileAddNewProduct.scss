@@ -1,0 +1,366 @@
+.ProfileAddNewProducts {
+  width: 100%;
+
+  .miniHeader {
+    font-family: 'CeraPro-Regular', sans-serif;
+    font-size: 14px;
+    color: #3D3D3D;
+    margin-bottom: 20px;
+
+    span {
+      font-family: 'CeraPro-Bold', sans-serif;
+    }
+
+    .productsLink {
+      text-decoration: none;
+      color: #3D3D3D;
+    }
+  }
+
+  .InputContainer {
+    input {
+      box-shadow: rgba(119, 152, 124, 0.2) 0 2px 12px;
+    }
+  }
+
+  .headCont {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+
+    .imagesCont {
+      width: 400px;
+      min-width: 400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      .img{
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        image-rendering: auto;
+        transition: 0.2s ease-in-out;
+      }
+
+      .blurImg{
+        filter: blur(2px);
+        }
+      .mainImage {
+        width: 300px;
+        height: 300px;
+        background-color: #E5E5E5;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        overflow: hidden;
+        &:hover{
+          .mainIcon{
+            scale: 1.05;
+          }
+        }
+
+
+
+
+        .mainIcon{
+          font-size: 64px;
+          transition: 0.1s ease-in-out;
+        }
+      }
+
+      .altImagesCont {
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .altImage{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          background-color: #E5E5E5;
+          border-radius: 16px;
+          height: 80px;
+          cursor: pointer;
+          overflow: hidden;
+          &:hover{
+            .altIcon{
+              scale: 1.05;
+            }
+          }
+          .altIcon{
+            transition: 0.1s ease-in-out;
+            font-size: 24px;
+          }
+        }
+      }
+
+    }
+
+    .inputsCont {
+      flex-grow: 1;
+      margin-right: 32px;
+    }
+  }
+
+  .nextCont {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .leftCont {
+      width: 50%;
+
+      .sizes {
+        display: flex;
+        align-items: start;
+        width: 100%;
+        gap: 6px;
+
+        .sizeBtn {
+          cursor: pointer;
+          width: 36px;
+          height: 36px;
+          min-width: 36px;
+          border-radius: 50%;
+          border: 1px solid #EAEAEA;
+          background-color: white;
+          font-size: 14px;
+          color: #727272;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'CeraPro-Regular', sans-serif;
+          transition: 0.2s ease-in-out all;
+
+          &:hover {
+            border-color: #46A358;
+          }
+        }
+
+        .activeBtn {
+          border: 1px solid #46A358;
+          font-family: 'CeraPro-Bold', sans-serif;
+          color: #46A358;
+          font-size: 14px;
+        }
+
+      }
+
+
+    }
+
+    .rightCont {
+      width: 48%;
+
+      .inputsBlock {
+        width: 100%;
+        position: relative;
+
+        .input {
+          width: 100%;
+          padding: 12px 14px;
+          border-radius: 8px;
+          border: 1px solid #EAEAEA;
+          outline: none;
+          background-color: white;
+          font-size: 14px;
+          font-family: 'CeraPro-Regular', sans-serif;
+          line-height: 16px;
+          position: relative;
+          z-index: 2;
+
+          &:focus-visible {
+            border-color: #46A358;
+          }
+
+        }
+
+        .addBtn {
+          position: absolute;
+          right: 12px;
+          top: 50%;
+          z-index: 2;
+          transform: translateY(-50%);
+          cursor: pointer;
+          padding: 2px 6px;
+          font-family: 'CeraPro-Bold', sans-serif;
+          color: #46A358;
+          background-color: transparent;
+          border: none;
+
+          &:hover {
+            cursor: pointer;
+            filter: brightness(1.1);
+          }
+        }
+
+
+      }
+
+      .tagsCont {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: start;
+        gap: 8px;
+        margin-top: 20px;
+
+        .tagBtn {
+          padding: 2px 8px;
+          border-radius: 4px;
+          background-color: rgba(0, 255, 54, 0.2);
+          color: rgb(37, 135, 59);
+          font-family: 'CeraPro-Regular', sans-serif;
+          font-size: 15px;
+          border: none;
+          cursor: pointer;
+          transition: 0.2s ease-in-out all;
+
+          &:hover {
+            text-decoration: underline;
+            color: #ff3535;
+            background-color: rgba(255, 53, 53, 0.2);
+          }
+        }
+      }
+
+    }
+  }
+
+  .endCont {
+    width: 100%;
+    margin-bottom: 20px;
+
+    .errorMessage{
+      font-size: 13px;
+      color: #ff3535;
+      font-family: 'CeraPro-Regular', sans-serif;
+    }
+
+    .altDescBlock {
+      width: 100%;
+      border: 2px solid #46A358;
+      padding: 16px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      .textarea{
+        margin-bottom: 20px;
+      }
+
+      .num {
+        margin-bottom: 16px;
+        font-family: 'CeraPro-Regular', sans-serif;
+        font-size: 14px;
+        color: #3D3D3D;
+      }
+
+      .textarea100 {
+        height: 100px;
+      }
+
+      .deleteBtn {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #ff3535;
+        color: #ff3535;
+        font-family: 'CeraPro-Regular', sans-serif;
+        font-size: 14px;
+        background-color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out all;
+
+        &:hover {
+          background-color: #ff3535;
+          color: white;
+        }
+      }
+
+
+    }
+
+    .altBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background-color: white;
+      border-radius: 8px;
+      padding: 8px;
+      border: 2px solid #46A358;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out all;
+      color: #46A358;
+      font-family: 'CeraPro-Regular', sans-serif;
+      font-size: 14px;
+      margin-top: 20px;
+
+      svg {
+        margin-top: 1px;
+
+        path {
+          transition: 0.2s ease-in-out all;
+        }
+      }
+      &:hover{
+        background-color: #46A358;
+        color: white;
+        path{
+          fill: white;
+        }
+      }
+
+    }
+
+
+  }
+
+
+  .textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    outline: none;
+    background-color: white;
+    font-size: 14px;
+    font-family: 'CeraPro-Regular', sans-serif;
+    line-height: 16px;
+    position: relative;
+    z-index: 2;
+    resize: none;
+    overflow: auto;
+
+    &::placeholder {
+      letter-spacing: 0 !important;
+    }
+
+    &:focus-visible {
+      border-color: #46A358;
+    }
+  }
+
+  .redInput {
+    border: 1px solid #ff3535 !important;
+  }
+
+
+}
